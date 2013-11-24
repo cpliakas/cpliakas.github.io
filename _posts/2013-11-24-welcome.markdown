@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Welcome to ChrisPliakas.com!"
+date:   2013-11-24 18:00:00
+categories: update
+---
+
+Hello! Welcome to ChrisPliakas.com! More to come soon ...
+
