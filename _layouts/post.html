@@ -1,9 +1,27 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<!-- ######################## Header ######################## -->
+<header>
+    <div class="row">
+        <article>
+            <div class="twelve columns">
+                <h1>{{ page.title }}</h1>
+                <p class="excerpt">{{ page.excerpt }}</p>
+            </div>
+        </article>
+    </div>
+</header>
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_light">
+    <div class="row">
+        <p class="post_meta">
+            <span class="lsf-icon" title="calender">{{ page.date | date_to_string }}</span>
+        </p>
+        {{ content }}
+    </div>
+</section>
+
