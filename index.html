@@ -14,13 +14,16 @@ title: Welcome to ChrisPliakas.com
               <h2>Recent Posts</h2>
 
               {% for post in site.posts %}
-              <article class="blog_post">
+              <article itemscope itemtype="http://schema.org/Blog" class="blog_post">
                   <div class="three columns">
                       <a href="#" class="th"><img src="images/thumb1.jpg" alt="desc" /></a>
+                      <p class="post_meta">
+                          <span class="lsf-icon" title="calender"><time itemprop="datePublished" datetime="{{ post.date}}">{{ post.date | date_to_string }}</time></span>
+                      </p>
                   </div>
                   <div class="nine columns">
-                      <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-                      <p> Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
+                      <a itemprop="url" href="{{ post.url }}"><h3 itemprop="name">{{ post.title }}</h3></a>
+                      <p>Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus.</p>
                   </div>
               </article>
               {% endfor %}
