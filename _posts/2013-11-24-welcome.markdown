@@ -1,9 +1,13 @@
 ---
 layout:     post
 title:      "Welcome to ChrisPliakas.com!"
-excerpt:    "Replatformed on GitHub, built with Jekyll"
-date:       2013-11-24 18:00:00
+excerpt:    "Replatformed on GitHub Pages, built with Jekyll"
+teaser:     "Thanks for coming back to ChrisPliakas.com! I have replatformed this blog on GitHub Pages and am building it with Jekyll. Content coming soon ..."
+date:       2013-11-27 18:00:00
 categories: update
 ---
 
-Thanks for coming back to ChrisPliakas.com! After I finish the replatform, I will start posting content again. Stay tuned for more ...
+Thanks for coming back to ChrisPliakas.com! I have replatformed this blog on
+<a href="http://pages.github.com/" target="_blank">GitHub Pages</a> and am building
+it with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. After I finish
+the rebuild, I will start posting content again. Stay tuned for more ...
