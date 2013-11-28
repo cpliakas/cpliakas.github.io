@@ -16,7 +16,7 @@ title: Welcome to ChrisPliakas.com
               {% for post in site.posts %}
               <article itemscope itemtype="http://schema.org/Blog" class="blog_post">
                   <div class="three columns">
-                      <a href="#" class="th"><img src="images/thumb1.jpg" alt="desc" /></a>
+                      <a href="{{ post.url }}" class="th"><img src="images/thumb1.jpg" alt="desc"/></a>
                       <p class="post_meta">
                           <span class="lsf-icon" title="calender"><time itemprop="datePublished" datetime="{{ post.date}}">{{ post.date | date_to_string }}</time></span>
                       </p>
