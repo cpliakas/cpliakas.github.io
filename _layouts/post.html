@@ -14,6 +14,8 @@ layout: default
         <div class="row">
             <p class="post_meta">
                 <span class="lsf-icon" title="calender"><time itemprop="datePublished" datetime="{{ page.date}}">{{ page.date | date_to_string }}</time></span>
+                -
+                <span itemprop="author">{{ page.author }}</span>
             </p>
             <div itemprop="text">{{ content }}</div>
         </div>

@@ -1,3 +1,6 @@
-name: ChrisPliakas.com
+name:     ChrisPliakas.com
+url:      http://www.chrispliakas.com
 markdown: redcarpet
 pygments: true
+exclude:  [Gemfile, Gemfile.lock, README.md]
+timezone: America/New_York
