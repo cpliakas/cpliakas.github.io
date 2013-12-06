@@ -1,31 +1,50 @@
 ---
 layout: default
 ---
-<article itemscope itemtype="http://schema.org/Blog">
-    <header>
-        <div class="row">
-            <div class="twelve columns">
-                <h1 itemprop="name">{{ page.title }}</h1>
-                <p itemprop="headline" class="excerpt">{{ page.excerpt }}</p>
-            </div>
+<section id="content" class="content-blog">
+    <div class="layout layout-MS">
+        <div class="main">
+            <article itemscope itemtype="http://schema.org/Blog" class="post">
+                <div class="post-header">
+                    <div class="post-date">
+                        <div class="blog-date" itemprop="datePublished" datetime="{{ page.date }}">
+                            <span class="blog-date-month">{{ page.date | date: "%b" }}</span>
+                            <span class="blog-date-day">{{ page.date | date: "%-d" }}</span>
+                            <span class="blog-date-year">{{ page.date | date: "%Y" }}</span>
+                        </div>
+                    </div>
+                    <div class="post-title">
+                        <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+                        <h4 class="hidden-phone">{{ page.excerpt }}</h4>
+                        <p>
+                            Published by <em itemprop="author">{{ page.author }}</em>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div itemprop="text" class="post-content">
+                    {{ content }}
+                </div>
+                <div class="share-buttons">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="cpliakas" data-size="large">Tweet</a>
+                    <script>
+                        ! function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + '://platform.twitter.com/widgets.js';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, 'script', 'twitter-wjs');
+                    </script>
+                </div>
+            </article>
+
         </div>
-    </header>
-    <section class="section_light">
-        <div class="row">
-            <p class="post_meta">
-                <span class="lsf-icon" title="calender"><time itemprop="datePublished" datetime="{{ page.date}}">{{ page.date | date_to_string }}</time></span>
-                -
-                <span itemprop="author">{{ page.author }}</span>
-            </p>
-            <div itemprop="text">{{ content }}</div>
 
-            <div class="share-buttons">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="cpliakas" data-size="large">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
+        {% include sidebar.html %}
 
-        </div>
-    </section>
-
-</article>
+    </div>
+</section>
 

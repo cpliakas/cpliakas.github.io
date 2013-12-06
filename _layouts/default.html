@@ -1,70 +1,100 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<head>
+        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
 
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
 
-    <title>{{ page.title }}</title>
+        <link href="/css/launched.css" rel="stylesheet">
+        <link href="/css/launched-responsive.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
 
-    <!-- Included CSS Files (Compressed) -->
-    <link rel="stylesheet" href="/stylesheets/foundation.min.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="stylesheet" href="/stylesheets/app.css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-    <link rel="alternate" type="application/atom+xml" title="ChrisPliakas.com - Drupal" href="{{ site.url }}/feed/drupal.xml" />
-    <link rel="alternate" type="application/atom+xml" title="ChrisPliakas.com - Tech" href="{{ site.url }}/feed/tech.xml" />
+    </head>
 
-    <script src="/javascripts/modernizr.foundation.js"></script>
+    <body class="fixed-header">
 
-    <link rel="stylesheet" href="/ligature.css">
+        <nav class="navbar">
+            <div class="navbar-pad">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h3>ChrisPliakas.com</h3>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-left">
+                            <li>
+                                <a href="/index.html">Blog</a>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li class="divider-vertical"></li>
+                            <li>
+                                <a href="https://twitter.com/cpliakas" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cpliakas</a>
+                                <script>
+									! function(d, s, id) {
+										var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+										if (!d.getElementById(id)) {
+											js = d.createElement(s);
+											js.id = id;
+											js.src = p + '://platform.twitter.com/widgets.js';
+											fjs.parentNode.insertBefore(js, fjs);
+										}
+									}(document, 'script', 'twitter-wjs');
+                                </script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+        {{ content }}
 
-    <!-- IE Fix for HTML5 Tags -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <footer>
+            <div class="container">
+                <ul class="pull-left">
+                    <li>
+                        <span class="mark"> <i class="icon-linkedin-sign"></i> </span>
+                        <a href="https://www.linkedin.com/in/cpliakas" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <span class="mark"> <i class="icon-github"></i> </span>
+                        <a href="https://github.com/cpliakas" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                        <span class="mark"> <i class="icon-twitter"></i> </span>
+                        <a href="https://twitter.com/cpliakas" target="_blank">Twitter</a>
+                    </li>
+                </ul>
+                <ul class="pull-right copyright">
+                    <li>
+                        &copy; 2013 Chris Pliakas
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
-</head>
+        <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/plugins/bootstrap-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script src="/js/main.js"></script>
 
-<body>
-
-<nav>
-    <div class="twelve columns header_nav">
-        <div class="row">
-            <ul id="menu-header" class="nav-bar horizontal">
-                <li><a href="/">Blog</a></li>
-            </ul>
-            <script type="text/javascript">
-                //<![CDATA[
-                $('ul#menu-header').nav-bar();
-                //]]>
-            </script>
-        </div>
-    </div>
-</nav>
-
-{{ content }}
-
-<footer>
-    <div class="row">
-        <div class="twelve columns footer">
-            <a href="http://twitter.com/cpliakas" class="lsf-icon" style="font-size:16px; margin-right:15px" title="twitter" target="_blank">Twitter</a>
-            <a href="http://github.com/cpliakas" class="lsf-icon" style="font-size:16px; margin-right:15px" title="github" target="_blank">GitHub</a>
-        </div>
-    </div>
-</footer>
-
-<script src="/javascripts/foundation.min.js" type="text/javascript"></script>
-<script src="/javascripts/app.js" type="text/javascript"></script>
-
-</body>
+    </body>
 </html>

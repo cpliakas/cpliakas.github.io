@@ -3,69 +3,47 @@ layout: default
 title: Welcome to ChrisPliakas.com
 ---
 
-<section>
+<section id="masthead" class="masthead-sub">
+    <div class="container">
+        <h1>Recent Blog Posts</h1>
+    </div>
+</section>
 
-  <div class="section_main">
+<section id="content">
+    <div class="layout layout-MS">
+        <div class="main">
+            <div class="posts">
 
-      <div class="row">
+                {% for post in site.posts %}
+                <article itemscope itemtype="http://schema.org/Blog" class="post">
+                    <div class="post-header">
+                        <div class="post-date">
+                            <div class="blog-date" itemprop="datePublished" datetime="{{ post.date }}">
+                                <span class="blog-date-month">{{ post.date | date: "%b" }}</span>
+                                <span class="blog-date-day">{{ post.date | date: "%-d" }}</span>
+                                <span class="blog-date-year">{{ post.date | date: "%Y" }}</span>
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                            <h4 class="hidden-phone">{{ post.excerpt }}</h4>
+                            <p>
+                                Published by <em itemprop="author">Chris Pliakas</em>
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="post-content">
+                        <p>
+                            {{ post.teaser }} <a href="{{ post.url }}">Continue Reading &raquo;</a>
+                        </p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
 
-          <section class="eight columns">
+        {% include sidebar.html %}
 
-              <h2>Recent Posts</h2>
-
-              {% for post in site.posts %}
-              <article itemscope itemtype="http://schema.org/Blog" class="blog_post">
-                  <div class="three columns">
-                      <a href="{{ post.url }}" class="th"><img src="images/thumb1.jpg" alt="desc"/></a>
-                      <p class="post_meta">
-                          <span class="lsf-icon" title="calender"><time itemprop="datePublished" datetime="{{ post.date}}">{{ post.date | date_to_string }}</time></span>
-                      </p>
-                  </div>
-                  <div class="nine columns">
-                      <a itemprop="url" href="{{ post.url }}"><h3 itemprop="name">{{ post.title }}</h3></a>
-                      <p>{{ post.teaser }}</p>
-                  </div>
-              </article>
-              {% endfor %}
-
-          </section>
-
-          <section class="four columns">
-              <h2>Sidebar</h2>
-                  <div class="panel">
-                      <h3>heading</h3>
-                      <p>Vivamus tortor tellus, rutrum sit amet mollis vel, imperdiet consectetur orci. Mauris pharetra congue enim, et sagittis lectus congue ut. Cum sociis natoque penatibus. Vivamus tortor tellus, rutrum sit amet mollis vel.</p>
-                      <h3>Accordion Panel</h3>
-                      <ul class="accordion">
-                          <li class="active">
-                              <div class="title">
-                                  <h5>Accordion Panel 1</h5>
-                              </div>
-                              <div class="content">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="title">
-                                  <h5>Accordion Panel 2</h5>
-                              </div>
-                              <div class="content">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="title">
-                                  <h5>Accordion Panel 3</h5>
-                              </div>
-                              <div class="content">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
-              </section>
-
-          </div>
-      </div>
-
+    </div>
 </section>
