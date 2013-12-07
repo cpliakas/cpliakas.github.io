@@ -32,15 +32,16 @@ The primary reason is that the revised architecture allows me to focus more on
 writing by spending less time maintaining the blog platform. The secondary
 reason is that I love to learn and enjoy challenging my own conclusions. One
 of the most dangerous things you can do in my line of work is reject other
-tools based on biased assumptions, because everything looks like a nail when
-all you have is a hammer. Drupal can be configured as an excellent blogging
+tools based on biased assumptions, because <a href="http://en.wikipedia.org/wiki/Law_of_the_instrument" title="Maslow's hammer" target="_blank">everything looks like a nail when all you have is a hammer</a>.
+Drupal can be configured as an excellent blogging
 platform, however evaluating the right tool for the job must also account for
 the people using it and the context in which it is being leveraged.
 
 Jekyll is a command line tool that converts templates and text files into flat
 HTML pages which is how it eliminates the maintenance headaches of any database
-driven website. My design skills are equivalent to a kindergartner drawing a
-blue duck with crayons, so it also helps to have a blank canvas where I can use
+driven website. My design skills are equivalent to
+<a href="http://www.youtube.com/watch?v=kp2skYYA2B4" title="Clip from Billy Madison" target="_blank">a first grader drawing a blue duck with crayons</a>,
+so it also helps to have a blank canvas where I can use
 front end frameworks as they are documented without the overhead of integrating
 them into a Drupal theme.
 

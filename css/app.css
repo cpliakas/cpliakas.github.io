@@ -4,6 +4,15 @@ nav h3 {
     padding-right: 2em;
 }
 
+p {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+
+.post .post-header {
+    padding-bottom: 0;
+}
+
 .navbar .nav {
     margin-top: 1.1em;
 }
