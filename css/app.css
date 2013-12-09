@@ -1,7 +1,16 @@
 nav h3 {
-    color: #fff;
     float: left;
     padding-right: 2em;
+}
+
+nav h3 a, nav h3 a:hover, nav h3 a:visited {
+    color: #eee;
+    text-decoration: none;
+}
+
+.navbar .nav > li > a:hover, .navbar .nav > li.dropdown > .dropdown-toggle:hover, .navbar .nav > li.dropdown.open > .dropdown-toggle, .navbar .nav > li.dropdown.active > .dropdown-toggle:hover, .navbar .nav > li.dropdown.active.open > .dropdown-toggle {
+    background: #002147;
+    color: #eee;
 }
 
 p {
@@ -19,6 +28,11 @@ p {
 
 .nav a {
     font-size: 20px;
+}
+
+footer {
+    color: #eee;
+    background: #002147;
 }
 
 footer .container {
@@ -60,6 +74,10 @@ footer .container {
 
 .copyright {
     padding-right: 3em;
+}
+
+.navbar .navbar-pad {
+    background: #002147;
 }
 
 @media (max-width: 480px) {
