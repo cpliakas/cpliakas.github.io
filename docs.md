@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Documentation
-permalink: /about/
+permalink: /docs/
 ---
 
-* Git Wrapper
-* PHP Project Starter
+* [PHP Project Starter](http://www.chrispliakas.com/php-project-starter)
