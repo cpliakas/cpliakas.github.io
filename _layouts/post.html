@@ -1,50 +1,53 @@
 ---
 layout: default
 ---
-<section id="content" class="content-blog">
-    <div class="layout layout-MS">
-        <div class="main">
-            <article itemscope itemtype="http://schema.org/Blog" class="post">
-                <div class="post-header">
-                    <div class="post-date">
-                        <div class="blog-date" itemprop="datePublished" datetime="{{ page.date }}">
-                            <span class="blog-date-month">{{ page.date | date: "%b" }}</span>
-                            <span class="blog-date-day">{{ page.date | date: "%-d" }}</span>
-                            <span class="blog-date-year">{{ page.date | date: "%Y" }}</span>
-                        </div>
-                    </div>
-                    <div class="post-title">
-                        <h2><a href="{{ post.url }}" itemprop="name">{{ page.title }}</a></h2>
-                        <h4 class="hidden-phone">{{ page.excerpt }}</h4>
-                        <p>
-                            Published by <em itemprop="author">{{ page.author }}</em>
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div itemprop="text" class="post-content">
-                    {{ content }}
-                </div>
-                <div class="share-buttons">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="cpliakas" data-size="large">Tweet</a>
-                    <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');
-                    </script>
-                </div>
-            </article>
 
-        </div>
+{% assign minutes = content | number_of_words | divided_by: 180 %}
+{% if minutes == 0 %}
+{% assign minutes = 1 %}
+{% endif %}
 
-        {% include sidebar.html %}
+<div class="post-header mb2">
+  <h1>{{ page.title }}</h1>
+  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
+  {% if page.update_date %}
+    <span class="post-meta">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
+  {% endif %}
+  <span class="post-meta small">{{ minutes }} minute read</span>
+</div>
 
+<article class="post-content">
+  {{ content }}
+</article>
+
+{% if site.show_post_footers %}
+  {% include post_footer.html %}
+{% endif %}
+
+{% if site.disqus_shortname %}
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = '{{ site.disqus_shortname }}';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title      = '{{ post.title }}';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
+
+{% if site.show_related_posts %}
+  <h3 class="related-post-title">Related Posts</h3>
+  {% for post in site.related_posts %}
+    <div class="post ml2">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+        <h4 class="post-title">{{ post.title }}</h4>
+        <p class="post-summary">{{ post.summary }}</p>
+      </a>
     </div>
-</section>
-
+  {% endfor %}
+{% endif %}

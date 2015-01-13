@@ -1,6 +1,43 @@
-name:     ChrisPliakas.com
-url:      http://www.chrispliakas.com
-markdown: redcarpet
-pygments: true
-exclude:  [Gemfile, Gemfile.lock, README.md]
-timezone: America/New_York
+# Site settings
+title:       ChrisPliakas.com
+email:
+author:      Chris Pliakas
+description: "Personal blog of Chris Pliakas. Opinions on this blog are mine and are no way influenced by or represent my employer."
+baseurl:     ""
+url:         "http://www.chrispliakas.com"
+
+# Google analytics
+google_analytics:
+
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:
+
+# Social icons
+show_social_icons: true
+github_username:   cpliakas
+stackoverflow_id:
+twitter_username:  cpliakas
+google_plus_id:
+linkedin_username: cpliakas
+bitcoin_url:
+paypal_url:
+flattr_button:
+
+# Build settings
+markdown:     redcarpet
+highlighter:  pygments
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     3
+sass:
+  compressed: true
+gems:
+  - jekyll-sitemap
+exclude:  [Gemfile, Gemfile.lock, README.md, LICENSE.txt]

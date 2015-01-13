@@ -1,49 +1,20 @@
 ---
 layout: default
-title: Welcome to ChrisPliakas.com
 ---
 
-<section id="masthead" class="masthead-sub">
-    <div class="container">
-        <h1>Recent Blog Posts</h1>
-    </div>
-</section>
+<div class="home">
 
-<section id="content">
-    <div class="layout layout-MS">
-        <div class="main">
-            <div class="posts">
+  <div class="posts">
+    {% for post in paginator.posts %}
+      <div class="post">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          <h3 class="h2 post-title">{{ post.title }}</h3>
+          <p class="post-summary">{{ post.summary }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 
-                {% for post in site.posts %}
-                <article itemscope itemtype="http://schema.org/Blog" class="post">
-                    <div class="post-header">
-                        <div class="post-date">
-                            <div class="blog-date" itemprop="datePublished" datetime="{{ post.date }}">
-                                <span class="blog-date-month">{{ post.date | date: "%b" }}</span>
-                                <span class="blog-date-day">{{ post.date | date: "%-d" }}</span>
-                                <span class="blog-date-year">{{ post.date | date: "%Y" }}</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <h2><a href="{{ post.url }}" itemprop="name">{{ post.title }}</a></h2>
-                            <h4 class="hidden-phone">{{ post.excerpt }}</h4>
-                            <p>
-                                Published by <em itemprop="author">Chris Pliakas</em>
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="post-content">
-                        <p>
-                            {{ post.teaser }} <a href="{{ post.url }}">Continue Reading &raquo;</a>
-                        </p>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-        </div>
-
-        {% include sidebar.html %}
-
-    </div>
-</section>
+  {% include pagination.html %}
+</div>

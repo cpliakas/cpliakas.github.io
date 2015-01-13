@@ -1,12 +1,9 @@
 ---
 layout:     post
 title:      "Why Jekyll?"
-excerpt:    "And Why Not Drupal?"
-teaser:     "If you follow my open source contributions, it is no secret that I am and continue to be an avid Drupal user. So why did I choose to move my blog off of Drupal?"
+summary:    "If you follow my open source contributions, it is no secret that I am and continue to be an avid Drupal user. So why did I choose to move my blog off of Drupal?"
 author:     Chris Pliakas
 date:       2013-12-03 20:00:00
-categories: blog
-tags:       [tech]
 ---
 
 If you follow my open source contributions, it is no secret that I am and
