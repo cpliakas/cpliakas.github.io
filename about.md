@@ -4,6 +4,6 @@ title: About Chris
 permalink: /about/
 ---
 
-Do you really want to know?
+Did you really want to know?
 
-Didn't think so.
+Didn't think so. Between us, I'm not all that interesting anyways.
