@@ -14,6 +14,6 @@ Bad engineers flip tables, good engineers build bridges. Bad engineers focus on 
 
 Good engineers frustrate easily and channel that energy towards improving things, bad engineers blame others for their frustration and are paralyzed by it. Good engineers question their superiors, bad engineers undermine them. Good engineers lead without titles, bad engineers need titles to lead. Good engineers disrupt the status quo, bad engineers use the status quo as justification.
 
-A bad engineer can be the smartest person in the room, a good engineer rarely feels like the smartest person in the room. Bad engineers always focus on what sucks, good engineers can find some genius in almost anything. Bad engineers explain things in minute detail, good engineers convey complex topics in a manner the audience can digest.
+A bad engineer can be the smartest person in the room, a good engineer rarely feels like the smartest person in the room. Bad engineers always focus on what sucks, good engineers can find some genius in almost anything. Bad engineers explain things in minute detail, good engineers convey complex topics in a manner the audience can digest. Bad engineers say "it works", good engineers say "I can't break it".
 
 No engineer is completely bad, no engineer is completely good. All engineers have power over which type of engineer they choose to be. A good engineer accepts this, a bad engineer labels their colleagues.
