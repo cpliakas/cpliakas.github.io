@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Good Engineer / Bad Engineer"
-summary:    "My adaptation of Ben Horowitz's <a href="http://web.stanford.edu/class/e140/e140a/handouts/ProductMgmt.txt" target="_blank">Good Product Manager / Bad Product Manager</a> that I use to set expectations for my team."
+summary:    "My adaptation of Ben Horowitz's \"Good Product Manager / Bad Product Manager\" that I use to set expectations for my team."
 author:     Chris Pliakas
 date:       2015-01-22 20:00:00
 ---
