@@ -7,7 +7,7 @@ baseurl:     ""
 url:         "http://www.chrispliakas.com"
 
 # Google analytics
-google_analytics:
+google_analytics: UA-20604333-1
 
 # Optional features
 animated:           false
