@@ -6,7 +6,7 @@ author:     Chris Pliakas
 date:       2015-01-22 20:00:00
 ---
 
-The following is my adaptation of Ben Horowitz's <a href="http://web.stanford.edu/class/e140/e140a/handouts/ProductMgmt.txt" target="_blank">Good Product Manager / Bad Product Manager</a> that I use to set expectations for my team:
+The following is my adaptation of Ben Horowitz's <a href="http://a16z.com/2012/06/15/good-product-managerbad-product-manager/" target="_blank">Good Product Manager / Bad Product Manager</a> that I use to set expectations for my team:
 
 Good engineers solve customer problems, bad engineers solve technical problems. Good engineers first understand the "why" and the "what", bad engineers jump straight to the "how". Good engineers make their colleagues smarter, bad engineers make their colleagues aware of how smart they are. Good engineers come armed with data, bad engineers come armed with opinions.
 

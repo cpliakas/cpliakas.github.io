@@ -39,5 +39,6 @@ paginate:     3
 sass:
   compressed: true
 gems:
+  - jekyll-paginate
   - jekyll-sitemap
 exclude:  [Gemfile, Gemfile.lock, README.md, LICENSE.txt]
